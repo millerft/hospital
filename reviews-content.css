@@ -1,0 +1,115 @@
+/* reviews-content.css */
+
+/* Reseñas Section specific styles */
+#informacion-pacientes {
+    padding: 4rem 0; /* py-16 */
+    background-color: white;
+}
+
+#informacion-pacientes .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#informacion-pacientes h3 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    color: #1d4ed8; /* blue-700 */
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+#informacion-pacientes h4 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #2563eb; /* blue-600 */
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+}
+
+#informacion-pacientes .grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+}
+
+#informacion-pacientes .grid > div {
+    background-color: #eff6ff; /* blue-50 */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+#informacion-pacientes .grid > div p.italic {
+    font-size: 1.125rem; /* text-lg */
+    font-style: italic;
+    color: #4b5563; /* gray-700 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+#informacion-pacientes .grid > div .flex.items-center {
+    display: flex;
+    align-items: center;
+}
+
+#informacion-pacientes .grid > div .flex.items-center img {
+    width: 4rem; /* w-16 */
+    height: 4rem; /* h-16 */
+    border-radius: 9999px; /* rounded-full */
+    margin-right: 1rem; /* mr-4 */
+    object-fit: cover;
+}
+
+#informacion-pacientes .grid > div .flex.items-center p.font-semibold {
+    font-weight: 600;
+    color: #1e40af; /* blue-800 */
+}
+
+#informacion-pacientes .grid > div .flex.items-center p.text-sm {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* gray-600 */
+}
+
+#informacion-pacientes .max-w-3xl {
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#informacion-pacientes .max-w-3xl > div {
+    background-color: #eff6ff; /* blue-50 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+#informacion-pacientes .max-w-3xl button {
+    width: 100%;
+    text-align: left;
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    color: #1d4ed8; /* blue-700 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#informacion-pacientes .max-w-3xl button span {
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+#informacion-pacientes .max-w-3xl > div > div.hidden {
+    margin-top: 1rem; /* mt-4 */
+    color: #4b5563; /* gray-700 */
+}
+
+/* Responsive adjustments for reviews section */
+@media (min-width: 768px) { /* md breakpoint */
+    #informacion-pacientes .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+}

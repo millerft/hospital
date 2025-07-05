@@ -1,0 +1,83 @@
+/* contact-content.css */
+
+/* Contact Section specific styles */
+#contacto {
+    padding: 4rem 0; /* py-16 */
+    background-color: #1e40af; /* blue-700 */
+    color: white;
+}
+
+#contacto .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#contacto h3 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+#contacto .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#contacto .flex > div {
+    width: 100%; /* w-full */
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+#contacto .flex p {
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 1rem; /* mb-4 */
+    display: flex;
+    align-items: center;
+}
+
+#contacto .flex p svg {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    margin-right: 0.75rem; /* mr-3 */
+    color: currentColor;
+}
+
+#contacto .flex p strong {
+    font-weight: 700;
+}
+
+#contacto .flex .bg-gray-200 {
+    background-color: #e2e8f0; /* gray-200 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    overflow: hidden;
+    height: 16rem; /* h-64 */
+    width: 100%; /* w-full */
+}
+
+#contacto .flex .bg-gray-200 iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments for contact section */
+@media (min-width: 768px) { /* md breakpoint */
+    #contacto .flex {
+        flex-direction: row;
+        gap: 3rem; /* md:space-x-12 */
+        align-items: flex-start;
+    }
+    #contacto .flex > div {
+        width: 50%; /* md:w-1/2 */
+        margin-bottom: 0;
+    }
+    #contacto .flex .bg-gray-200 {
+        height: 20rem; /* md:h-80 */
+    }
+}

@@ -1,0 +1,110 @@
+/* services-content.css */
+
+/* Servicios y Especialidades Section specific styles */
+#servicios-especialidades {
+    padding: 4rem 0; /* py-16 */
+    background-color: #eff6ff; /* blue-50 */
+}
+
+#servicios-especialidades .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#servicios-especialidades h3 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    color: #1d4ed8; /* blue-700 */
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+#servicios-especialidades h4 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #2563eb; /* blue-600 */
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+}
+
+#servicios-especialidades .grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+}
+
+#servicios-especialidades .grid > div {
+    background-color: white;
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: center;
+}
+
+#servicios-especialidades .grid > div:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
+    transform: translateY(-0.25rem); /* hover:-translate-y-1 */
+}
+
+#servicios-especialidades .grid > div svg {
+    color: #2563eb; /* blue-600 */
+    margin-bottom: 1rem; /* mb-4 */
+    width: 3rem; /* w-12 */
+    height: 3rem; /* h-12 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#servicios-especialidades .grid > div h5 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    text-align: center;
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+#servicios-especialidades .grid > div p {
+    color: #4b5563; /* gray-600 */
+    text-align: center;
+}
+
+/* Specific styles for department cards */
+#servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 > div {
+    background-color: #e0f2fe; /* blue-100 */
+    padding: 1.5rem; /* p-6 */
+}
+
+#servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 > div h5 {
+    color: #1e40af; /* blue-800 */
+    margin-bottom: 0.75rem; /* mb-3 */
+}
+
+#servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 > div p {
+    color: #374151; /* gray-700 */
+}
+
+
+/* Responsive adjustments for services and specialties section */
+@media (min-width: 768px) { /* md breakpoint */
+    #servicios-especialidades .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+    #servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+    #servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    #servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+    }
+    #servicios-especialidades .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); /* lg:grid-cols-4 */
+    }
+}

@@ -1,0 +1,61 @@
+/* ventanilla-content.css */
+
+/* Hospital de Ventanilla Section specific styles */
+#ventanilla {
+    padding: 4rem 0; /* py-16 */
+    background-color: #e0f2fe; /* blue-100 */
+}
+
+#ventanilla .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#ventanilla h3 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    color: #1d4ed8; /* blue-700 */
+    margin-bottom: 3rem; /* mb-12 */
+}
+
+#ventanilla .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ventanilla .flex img {
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#ventanilla .flex p {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.625; /* leading-relaxed */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+#ventanilla .flex p.font-semibold {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 600;
+    color: #1e40af; /* blue-800 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Responsive adjustments for Ventanilla section */
+@media (min-width: 768px) { /* md breakpoint */
+    #ventanilla .flex {
+        flex-direction: row-reverse; /* md:flex-row-reverse */
+        gap: 3rem; /* md:space-x-12 */
+    }
+    #ventanilla .flex > div {
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
