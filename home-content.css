@@ -3,14 +3,21 @@
 /* Hero Section specific styles */
 #inicio {
     position: relative;
-    background-image: linear-gradient(to right, #2563eb, #1e40af); /* Example gradient for hero */
+    /* Reemplaza esta URL con la ruta correcta a tu imagen OIP.webp */
+    background-image: url('OIP.webp'); /* Usando la imagen OIP.webp como fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen */
     color: white;
     padding: 5rem 0; /* py-20 */
     overflow: hidden;
+    /* Añadir un degradado semi-transparente para oscurecer el fondo */
+    background-blend-mode: multiply; /* Mezcla el color con la imagen */
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura para mejorar el contraste */
 }
 
 #inicio .absolute.inset-0 {
-    opacity: 0.2;
+    opacity: 0.2; /* Mantiene la opacidad para que el texto sea legible */
 }
 
 #inicio .container {
@@ -26,6 +33,7 @@
     font-weight: 800; /* font-extrabold */
     line-height: 1.25; /* leading-tight */
     margin-bottom: 1.5rem; /* mb-6 */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Borde negro más grueso para el título */
 }
 
 #inicio p {
@@ -35,6 +43,7 @@
     margin-left: auto;
     margin-right: auto;
     opacity: 0.9;
+    text-shadow: 20px 20px 50px rgba(0, 0, 0, 1); /* Borde negro aún más grueso y oscuro para el párrafo (25% más) */
 }
 
 #inicio a.bg-white {

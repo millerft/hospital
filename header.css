@@ -31,6 +31,7 @@ header .flex.items-center {
 }
 
 header .flex.items-center svg {
+    display: none; /* Oculta el icono del logo */
     width: 3rem; /* Larger icon */
     height: 3rem;
     margin-right: 1rem;
@@ -67,7 +68,7 @@ header nav ul li {
     flex-grow: 0; /* Prevent list items from growing excessively */
     flex-basis: auto; /* Allow flex items to determine their own width based on content */
     text-align: center; /* Center content within each list item */
-    /* Removed min-width for mobile, letting content and padding define size */
+    min-width: 60px; /* Set a minimum width for each navigation item */
 }
 
 header nav ul li a {
@@ -76,16 +77,16 @@ header nav ul li a {
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     border-radius: 0.375rem; /* rounded-md */
-    padding: 0.05rem; /* Minimum padding for all sides */
+    padding: 0.1rem 0.15rem; /* Adjusted padding for slightly larger text */
     display: flex;
     flex-direction: column; /* Stack icon and text vertically on small screens */
     align-items: center;
     justify-content: center; /* Center content within the link */
     text-align: center;
     white-space: normal; /* Allow text to wrap if necessary within the link */
-    line-height: 1; /* Tight line height for stacked text */
+    line-height: 1.1; /* Adjusted line height for stacked text */
     height: 100%; /* Ensure link takes full height of li */
-    font-size: 0.5rem; /* Even smaller font size */
+    font-size: 0.6rem; /* Slightly larger font size for mobile */
 }
 
 header nav ul li a:hover {
@@ -96,8 +97,8 @@ header nav ul li a:hover {
 }
 
 header nav ul li a svg {
-    width: 0.7rem; /* Adjusted icon size - even smaller */
-    height: 0.7rem; /* Adjusted icon size - even smaller */
+    width: 0.8rem; /* Adjusted icon size to match slightly larger text */
+    height: 0.8rem; /* Adjusted icon size to match slightly larger text */
     margin-right: 0; /* Remove margin-right for stacked layout */
     margin-bottom: 0.05rem; /* Small space between icon and text */
     color: currentColor; /* Inherit color from parent 'a' */
@@ -111,7 +112,7 @@ header nav ul li a svg {
     }
     header .flex.items-center {
         margin-bottom: 0;
-        margin-right: 4rem; /* Restore margin-right for larger screens */
+        margin-right: 2rem; /* Reduced margin-right for larger screens */
     }
     header nav {
         margin-top: 0; /* Remove margin-top for larger screens */
@@ -119,7 +120,7 @@ header nav ul li a svg {
     }
     header nav ul {
         gap: 1rem; /* Adjusted md:space-x-4 for better fit */
-        justify-content: flex-end; /* Align navigation to the right on larger screens */
+        justify-content: space-around; /* Distribute items with space around them */
         font-size: 1.125rem; /* Restore original font size for larger screens */
         flex-wrap: nowrap; /* Prevent wrapping on larger screens */
     }

@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Align items to start for contact info */
 }
 
 #contacto .flex > div {
@@ -33,24 +33,40 @@
     margin-bottom: 2rem; /* mb-8 */
 }
 
+/* Contact Information Paragraphs */
 #contacto .flex p {
     font-size: 1.125rem; /* text-lg */
     margin-bottom: 1rem; /* mb-4 */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align icon and text at the top of the line */
+    width: 100%; /* Ensure paragraph takes full width to align content */
 }
 
-#contacto .flex p svg {
+#contacto .flex p .contact-label { /* Applying to the strong tag with this class */
+    flex-shrink: 0; /* Prevent strong tag from shrinking */
+    margin-right: 0.75rem; /* Adjusted margin between label and value */
+    display: inline-block; /* Treat strong as a block for consistent spacing */
+    min-width: 7rem; /* Increased min-width for better alignment */
+    max-width: 8rem; /* Added max-width for consistency */
+    text-align: right; /* Align the strong text to the right within its fixed width */
+}
+
+#contacto .flex p .contact-value { /* Applying to the new span for the value */
+    flex-grow: 1; /* Allow value to take remaining space */
+    text-align: left; /* Ensure value text aligns left */
+}
+
+#contacto .flex p .contact-icon { /* Applying to the svg with this class */
+    display: none; /* Oculta los iconos de la información de contacto */
     width: 1.5rem; /* w-6 */
     height: 1.5rem; /* h-6 */
     margin-right: 0.75rem; /* mr-3 */
     color: currentColor;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-top: 0; /* No vertical adjustment needed with align-items: flex-start */
 }
 
-#contacto .flex p strong {
-    font-weight: 700;
-}
-
+/* Map Placeholder */
 #contacto .flex .bg-gray-200 {
     background-color: #e2e8f0; /* gray-200 */
     border-radius: 0.5rem; /* rounded-lg */
@@ -64,6 +80,76 @@
     border: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Contact Form Styles */
+#contacto form {
+    background-color: white;
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    color: #1a202c; /* gray-800 */
+}
+
+/* New style for the form title */
+#contacto form h4 {
+    color: #1d4ed8; /* blue-700 */
+}
+
+#contacto form .mb-4,
+#contacto form .mb-6 {
+    margin-bottom: 1rem; /* mb-4 or mb-6 */
+}
+
+#contacto form label {
+    display: block;
+    color: #4a5568; /* gray-700 */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+#contacto form input[type="text"],
+#contacto form input[type="email"],
+#contacto form textarea {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow */
+    appearance: none;
+    border: 1px solid #e2e8f0; /* border */
+    border-radius: 0.25rem; /* rounded */
+    width: 100%; /* w-full */
+    padding: 0.5rem 0.75rem; /* py-2 px-3 */
+    color: #4a5568; /* text-gray-700 */
+    line-height: 1.25; /* leading-tight */
+    outline: none; /* focus:outline-none */
+}
+
+#contacto form input[type="text"]:focus,
+#contacto form input[type="email"]:focus,
+#contacto form textarea:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* focus:shadow-outline */
+}
+
+#contacto form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contacto form button[type="submit"] {
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    font-weight: 700; /* font-bold */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border-radius: 0.25rem; /* rounded */
+    outline: none; /* focus:outline-none */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* focus:shadow-outline */
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: center;
+}
+
+#contacto form button[type="submit"]:hover {
+    background-color: #1d4ed8; /* blue-700 */
+    transform: scale(1.05);
 }
 
 /* Responsive adjustments for contact section */
